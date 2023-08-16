@@ -1,0 +1,16 @@
+.text-on-image {
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+.modal-body-content-color {
+  background-color: rgb(245, 244, 244);
+}
+.boxShadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  border: none;
+}

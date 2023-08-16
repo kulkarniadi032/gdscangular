@@ -1,0 +1,30 @@
+/* .aa {
+  height: 80vh;
+} */
+.chatBoat {
+  position: absolute;
+  bottom: 40px;
+  right: 110px;
+}
+
+.chatform {
+  position: absolute;
+  right: 110px;
+  bottom: 120px;
+  width: 25%;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.answerdiv {
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .aa {
+    display: none;
+  }
+  .chatform {
+    display: none;
+  }
+}

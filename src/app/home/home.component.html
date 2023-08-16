@@ -1,0 +1,288 @@
+<div class="text-center pt-4 mt-md-4 pb-md-5">
+  <img src="./assets/images/download.png" alt="" class="img-fluid" />
+  <div class="container">
+    <div class="deogiri-letters mt-2">
+      <span class="text-primary">D</span>eogiri
+      <span class="text-danger">I</span>nstitute
+      <span class="text-warning">O</span>f
+      <span class="text-primary">E</span>ngineering
+      <span class="text-success">A</span>nd
+      <span class="text-danger">M</span>anagement
+      <span class="text-warning">S</span>tudies
+    </div>
+  </div>
+  <div class="mb-5">
+    <a href="#All"
+      ><button class="btn btn-success btn-lg mt-4 mb-4">Read More</button></a
+    >
+  </div>
+</div>
+<div
+  class="bg-light mb-5 pb-5 card-div"
+  data-aos="fade-up"
+  data-aos-anchor-placement="top-bottom"
+  data-aos-duration="2000"
+>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-4 icon-cards" id="All">
+        <div class="card mt-5">
+          <div class="card-body shadow pt-4">
+            <h1
+              class="text-center fs-2 shadow rounded-circle bg-danger text-light p-3 ms-2 d-inline-block"
+            >
+              <i class="bi bi-laptop"></i>
+            </h1>
+            <div class="mt-3 p-2">
+              Deogiri Institute of Engineering and Management Studies is
+              established at Aurangabad during the academic year 2009-10, in
+              fulfillment with the policies of the Government of India to start
+              Engineering colleges in emerging technologies.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 icon-cards">
+        <div class="card mt-5">
+          <div class="card-body shadow pt-4">
+            <h1
+              class="text-center fs-2 shadow rounded-circle bg-primary text-light p-3 ms-2 d-inline-block"
+            >
+              <i class="bi bi-people-fill"></i>
+            </h1>
+            <div class="mt-3 p-2">
+              Deogiri Institute of Engineering and Management studies has 100+
+              highly experienced, dedicated and motivating Faculty Members. They
+              aim at providing the best and industrial ready graduates. Students
+              learn both therotical and practical ways to go around academics.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 icon-cards">
+        <div class="card mt-5">
+          <div class="card-body shadow pt-4">
+            <h1
+              class="fs-2 shadow rounded-circle bg-success text-light text-center d-inline-block p-3 ms-2"
+            >
+              <i class="bi bi-journal-bookmark-fill"></i>
+            </h1>
+            <div class="mt-3 p-2">
+              DIEMS has shown consistent growth since the beginning. With it’s
+              ever-growing placements and top results in University. Today,
+              DIEMS is home to more than 1000 students, enrolled in various
+              undergraduates, post-graduates and masters programs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div
+    class="row mb-5"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+    data-aos-duration="2000"
+  >
+    <div class="col-md-6 col-sm-12 mt-4 mb-5">
+      <h2>Welcome To Our Campus</h2>
+      <div class="mt-4">
+        Deogiri Institute of Engineering and Management Studies is an
+        undergraduate and postgraduate, coeducational college along with
+        Research center in many disciplines, located in Aurangabad, Maharashtra.
+        It was established in the year 1960 by Marathwada Shikshan Prasarak
+        Mandal.
+      </div>
+      <div class="mt-3">
+        The college is affiliated with Dr. Babasaheb Ambedkar Marathwada
+        University. it has various clubs for college students in which they can
+        master their skills by participating.
+      </div>
+      <div>
+        <button class="btn btn-warning mt-4" [routerLink]="['/about']">
+          Read More
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12 mt-4 mb-5 overflow-hidden">
+      <img
+        src="./assets/images/community-logo1.png"
+        alt=""
+        class="img-fluid shadow hvr-grow"
+      />
+    </div>
+  </div>
+</div>
+<div class="container bg-light mt-5 p-5">
+  <div class="row" (scroll)="scrollHandler($event)">
+    <div class="col-md-3">
+      <div class="d-flex">
+        <div class="total-count text-primary pt-3" id="div1">
+          {{ project }}
+        </div>
+        <div class="align-self-center p-3">PROFESSIONAL INSTRUCTORS</div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="d-flex">
+        <div class="total-count text-danger pt-3" id="div3">
+          {{ hackathon }}+
+        </div>
+        <div class="align-self-center p-3">HACKATHONS</div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="d-flex">
+        <div class="total-count text-warning pt-3" id="div2">
+          {{ event }}
+        </div>
+        <div class="align-self-center p-3">
+          EVENTS <br />
+          CONDUCTED
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="d-flex">
+        <div class="total-count text-success pt-3" id="div4">
+          {{ student }}+
+        </div>
+        <div class="align-self-center p-3">STUDENTS</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-md-5 mb-md-5 pb-md-5 student-div">
+  <div class="main-image">
+    <div
+      class="gallery js-flickity mt-5"
+      data-flickity-options='{ "wrapAround": true }'
+    >
+      <div class="gallery-cell d-flex">
+        <div>
+          <img
+            src="./assets/images/principle.jpeg"
+            alt=""
+            class="p-5 img-fluid h-100 shadow"
+          />
+        </div>
+        <div class="col-md-6 text-light align-self-center text-center p-4">
+          <h1>Hear from our Director Sir</h1>
+          <div class="mt-4">
+            I Congratulate Team GDSC DIEMS for taking an initiative to start
+            this Global Community Chapter in our region. A strong board needs a
+            combination of theoretical and practical knowledge. Google Developer
+            Student Clubs is global community platform for students to gain
+            practical exposure and showcase that skills in various Hackathons,
+            In hand Workshops, Speaker Sessions and Tech Conferences.
+            <div class="mt-3 fs-5 fst-italic">
+              I recommend all the students to join this amazing global community
+              of local developers.
+            </div>
+            <div>Dr. Ulhas Shiurkar (Director DIEMS)</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell d-flex">
+        <img src="./assets/images/hod.jpeg" alt="" class="h-100 p-5 shadow" />
+        <div class="text-light text-center p-4 align-self-center">
+          <h1>Hear from our GDSC Lead</h1>
+          <div class="mt-4">
+            What I appreciate about participating in the Google Developers is
+            the combination of coupled developers around the world, with the
+            interaction you get with peers from different organizations with
+            different personalities, genders, perspectives, etc. I feel immense
+            pleasure to welcome all the developers from variety of backgrounds
+            for joining us.
+            <div class="mt-3 fs-5 fst-italic">
+              "We learn by sharing our knowledge."
+            </div>
+            <div>Sandesh Bandal</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cell d-flex">
+        <div>
+          <img
+            src="./assets/images/gdsc_lead2.png"
+            alt=""
+            class="h-100 p-5 shadow"
+          />
+        </div>
+        <div class="text-light text-center p-4 align-self-center">
+          <h1>Hear from our GDSC Lead</h1>
+          <div class="mt-4">
+            What I appreciate about participating in the Google Developers is
+            the combination of coupled developers around the world, with the
+            interaction you get with peers from different organizations with
+            different personalities, genders, perspectives, etc. I feel immense
+            pleasure to welcome all the developers from variety of backgrounds
+            for joining us.
+            <div class="mt-3 fs-5 fst-italic">
+              "We learn by sharing our knowledge."
+            </div>
+            <div>Sandesh Bandal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5 mt-5 pt-3">
+  <div class="row">
+    <div
+      class="text-center"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
+      <h1 class="mb-4">Upcoming Events</h1>
+    </div>
+
+    <div
+      class="col-md-4 mt-5"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"
+    >
+      <div class="card overflow-hidden">
+        <img
+          src="./assets/images/solutionchallenge-homepage.png"
+          alt=""
+          class="hvr-grow"
+        />
+        <div class="bg-primary position-absolute end-0 date-div">
+          <h5 class="text-light text-center pt-2 rounded-3">
+            12<br />
+            Feb
+          </h5>
+        </div>
+        <div class="card-body">
+          <h4 class="mt-3">Solution Challenge</h4>
+          <div class="mt-4">
+            What’s the Solution Challenge? The mission of the 2022 Solution
+            Challenge is to solve for one or more of the United Nations 17
+            Sustainable Development Goals using Google technology. The Solution
+            Challenge is open to members of Google Developer Student Clubs.
+          </div>
+          <div class="mt-4">
+            <button
+              class="btn btn-outline-primary"
+              [routerLink]="['/event']"
+              routerLinkActive="router-link-active"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

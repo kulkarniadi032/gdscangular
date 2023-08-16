@@ -1,0 +1,87 @@
+<div class="chatform position-fixed">
+  <div class="card" *ngIf="isShow">
+    <div class="card-header d-flex">
+      <b>Ask Your Questions?</b>
+      <i class="bi bi-x-lg ms-auto" type="button" (click)="showChatBox()"></i>
+    </div>
+    <div class="card-body">
+      <div class="m-2 p-3 shadow answerdiv mb-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+        pariatur sed architecto officia. Fugiat facilis doloribus, minima ad
+        dolore in recusandae totam iure nemo tempora fugit repudiandae
+        aspernatur cum! Blanditiis!
+      </div>
+      <button class="btn btn-sm btn-success rounded-pill">What is GDSC?</button>
+      <button class="btn btn-sm btn-success rounded-pill m-2">
+        What is GDSC?
+      </button>
+      <button class="btn btn-sm btn-success rounded-pill">What is GDSC?</button>
+      <button class="btn btn-sm btn-success rounded-pill ms-2">
+        What is GDSC?
+      </button>
+      <button class="btn btn-sm btn-success rounded-pill mt-2">
+        What is GDSC?
+      </button>
+    </div>
+  </div>
+</div>
+<div class="aa">
+  <div class="chatBoat position-fixed">
+    <button
+      class="btn btn-danger rounded-pill fs-5 shadow"
+      (click)="showChatBox()"
+    >
+      <i class="bi bi-whatsapp me-1"></i>Chat
+    </button>
+  </div>
+</div>
+
+<!-- modal window code -->
+<button
+  type="button"
+  class="d-none"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  id="button"
+></button>
+
+<!-- <div class="modal fade" id="exampleModal" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fw-bold" id="exampleModalLabel">
+          <span class="text-danger">WELCOME</span>
+          <span class="text-warning ms-2">IN</span>
+          <span class="text-success ms-2">GDSC</span>
+          <span class="text-primary ms-2">DIEMS</span>
+        </h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./assets/images/chatBotImage.gif"
+              alt=""
+              class="img-fluid bg-danger mt-5"
+            />
+          </div>
+          <div class="col-md-6">
+            You can ask your question using chatBot or you can ask your doubts
+            on contact page
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->

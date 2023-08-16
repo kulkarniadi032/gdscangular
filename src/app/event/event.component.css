@@ -1,0 +1,13 @@
+.navbar-margin {
+  margin-left: 190px;
+}
+.text-on-image {
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+.imageHeight {
+  height: 200px;
+}

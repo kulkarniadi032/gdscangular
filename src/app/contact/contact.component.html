@@ -1,0 +1,134 @@
+<div class="d-flex text-on-image mt-5 pt-5 pb-5">
+  <div class="hvr-grow text-center">
+    <span class="text-primary">C</span>
+    <span class="text-danger">O</span>
+    <span class="text-warning">N</span>
+    <span class="text-warning">T</span>
+    <span class="text-success">A</span>
+    <span class="text-primary">C</span>
+    <span class="text-danger">T</span>
+    <div class="d-inline ms-4">
+      <span class="text-warning">U</span>
+      <span class="text-success">S</span>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card mb-5 mt-4">
+        <div class="card-header text-center">Ask your doubts here</div>
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="contactFormData(form)">
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+                formControlName="name"
+                [ngClass]="{
+                  'is-valid':
+                    form.get('name')?.valid && form.get('name')?.touched,
+                  'is-invalid':
+                    !form.get('name')?.valid && form.get('name')?.touched
+                }"
+              />
+              <span class="invalid-feedback"
+                >Please enter your Name & Surname</span
+              >
+              <span class="valid-feedback">Thank you!!!</span>
+            </div>
+            <div>
+              <input
+                type="email"
+                class="form-control mt-3"
+                placeholder="Enter your email"
+                formControlName="email"
+                [ngClass]="{
+                  'is-valid':
+                    form.get('email')?.valid && form.get('email')?.touched,
+                  'is-invalid':
+                    !form.get('email')?.valid && form.get('email')?.touched
+                }"
+              />
+
+              <span class="invalid-feedback"
+                >Please enter your valid email</span
+              >
+              <span class="valid-feedback">Thank you!!!</span>
+            </div>
+            <div>
+              <textarea
+                class="form-control mt-3"
+                placeholder="Ask your query"
+                formControlName="query"
+                [ngClass]="{
+                  'is-valid': form.get('query')?.valid,
+                  'is-invalid':
+                    !form.get('query')?.valid && form.get('query')?.touched
+                }"
+              ></textarea>
+              <span class="invalid-feedback"
+                >Please ennter your doubt here</span
+              >
+              <span class="valid-feedback">Thank you!!!</span>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-outline-primary mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#doubtsModal"
+                [disabled]="
+                  !(
+                    form.get('query')?.valid &&
+                    form.get('email')?.valid &&
+                    form.get('name')?.valid
+                  )
+                "
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="doubtsModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center" *ngIf="isTrue">
+          <img
+            src="./assets/images/checkmarksuccess.gif"
+            alt=""
+            class="img-fluid h-50 w-50"
+          />
+          <div class="text-center fs-4 fw-bold mb-5">
+            You send Message successfully
+          </div>
+        </div>
+        <div class="text-center" *ngIf="!isTrue">
+          <img
+            src="./assets/images/wrong.gif"
+            alt=""
+            class="img-fluid h-25 w-25 mt-5"
+          />
+          <div class="text-center fs-4 fw-bold mt-4 mb-5">Please try again</div>
+        </div>
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-secondary d-none"
+            data-bs-dismiss="modal"
+            id="successfulMessage"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
